@@ -1,0 +1,276 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap';
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 940px;
+    margin: 0 auto;
+    
+    
+}
+
+header {
+
+    padding:  30px 0;
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    
+}
+
+header img {
+    margin-top: 10px;
+    height: 26.9px;
+    width: 90.6px;
+
+}
+
+.links{
+    margin-top: 12px;
+    margin-left: 15%;
+}
+
+.links a{
+    text-decoration: none;
+    width:42px ;
+    height: 19px;
+    margin: 0 15px;
+    color: black;
+    font-size: 16px;
+    
+}
+
+#label {
+    background-color: #FBDFDB;
+    width: 940px;
+    height: 366px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    
+}
+
+#label .text {
+    margin-top: 40px;
+    padding: 65px;
+}
+
+#label .text .bold {
+    margin-bottom: 9px;
+    font-size: 38px;
+    font-weight: bold;
+    opacity: 100%;
+    
+}
+
+#label .text p {
+    font-size: 18px;
+    margin-bottom: 8px;
+    opacity: 70%;
+    
+}
+
+#label .image {
+    margin-top: 21%;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 20px;
+}
+
+.title h1 {
+    margin-top: 50px;
+    font-size: 24px;
+}
+
+.card img {
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+    margin: 19px 0;
+}
+
+.card p {
+    font-size: 18px;
+}
+.card small {
+    opacity: 0.7;
+}
+
+.recip {
+    cursor: pointer;
+}
+.space {
+    height: 100px;
+}
+footer {
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #eeeeee;
+    font-size: 14px;
+    color: #999999;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/*** ABOUT ***/
+
+.title1 {
+    font-size: 24px;
+    padding: 15px 0;
+}
+
+.about {
+    width: 940px;
+    height: 280px;
+    font-size: 18px;
+    color:  #444444;
+}
+
+.about p {
+    padding-bottom: 30px;
+    line-height: 28px;
+}
+
+/*** Modal ***/
+
+.modal-overlay {
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 660px;
+    height: 413px;
+    margin: 200px auto;
+    border-radius: 16px;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: #999999;
+    position: absolute;
+    bottom: 27px;
+    cursor: pointer;
+    right: 42%;
+
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+.image-modal {
+    width: 600px;
+    height: 200px;
+    margin: 30px;
+    border-radius: 15px;
+   
+   
+}
+.modal-content {
+    text-align: center;
+}
+
+.modal-content .title {
+    margin-top: -5px;
+    margin-bottom: 3px;
+    font-size: 24px;
+}
+
+.modal-content small{
+    font-size: 18px;
+    color: #777777;
+}
+
+/*** DETAIL ***/
+.carddetail {
+    display: block;
+}
+
+.recipdetail img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.recipdetail h1{
+    font-size: 36px;
+    text-align: center;
+    padding-top: 42px;
+}
+
+.recipdetail p{
+    color: #777777;
+    font-size: 20px;
+    text-align: center;
+}
+
+.recipdetail ul{
+    font-size: 24px;
+    color: #111111;
+    font-weight: bold;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    line-height: 28px;
+}
+
+.recipdetail ul span{
+    font-size: 12px;
+    color: #999999;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.ingred{
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+.ingred.active,.prep.active,.info.active{
+    visibility: hidden;
+    height: 0;
+}
+
+.mostrar,.mostrar1,.mostrar2 {
+    visibility: hidden;
+    position: absolute;
+    right: 85px;
+}
+
+.mostrar.active,.mostrar1.active,.mostrar2.active {
+    visibility: visible;
+}
+
+.esconder,.esconder1,.esconder2 {
+    visibility: visible;
+}
+
+.esconder.active,.esconder1.active,.esconder2.active {
+    visibility: hidden;
+}
+
+.recipdetail .prep,.recipdetail .info {
+    font-size: 18px;
+    text-align: left;
+    line-height: 28px;
+}
