@@ -1,0 +1,30 @@
+{%extends "layout.njk" %}
+
+
+    {%block content%}
+        <section class="carddetail">
+                <div class="recipdetail" id="{{recipe.title}}">
+                    <img src="{{recipe.image}}" alt="">
+                    <h1 id="pdetail">{{recipe.title}}</h1>
+                    <p  id="smalldetail">{{recipe.author}}</p>
+                    <ul>Ingredientes <span class="esconder">ESCONDER</span> <span class="mostrar">MOSTRAR</span> </ul>
+                    
+                    {%for ingredient in recipe.ingredients%}
+                    <li class="ingred " >{{ingredient}};</li>
+                    {%endfor%}
+
+                    <ul>Modo de Preparo <span class="esconder1">ESCONDER</span> <span class="mostrar1">MOSTRAR</span> </ul>
+                    {%for line in recipe.preparation%}
+                    <p class="prep " >{{line}}</p>
+                    {%endfor%}
+
+                    <ul>informações Adicionais <span class="esconder2">ESCONDER</span> <span class="mostrar2">MOSTRAR</span> </ul>
+                    <p class="info" >{{recipe.information}}</p>
+                    
+                </div>
+        </section> 
+ 
+
+    <script src="/scripts.js"></script>
+    
+    {%endblock%}

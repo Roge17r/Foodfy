@@ -1,18 +1,9 @@
 {%extends "layout.njk" %}
 
-    <head>
-
-        {%block head%}
-            <title>FoodFy - Receitas </title>
-            <link rel="stylesheet" href="styles.css">
-        {%endblock%}
-
-    </head>
-
     {%block content%}
         <section class="card">
             {%for recipe in recipes %}
-                <div class="recip" id="2">
+                <div class="recip" id="{{0}}">
                     <img src="{{recipe.image}}" alt="">
                     <p id="burger1">{{recipe.title}}</p>
                     <small  id="burger2">{{recipe.author}}</small>
@@ -21,6 +12,5 @@
         </section> 
  
 
-    <script src="/scripts.js"></script>
     
     {%endblock%}

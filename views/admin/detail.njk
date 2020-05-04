@@ -1,33 +1,25 @@
 {%extends "layout.njk" %}
 
-    <head>
-
-        {%block head%}
-            <title>FoodFy - Receitas </title>
-            <link rel="stylesheet" href="/styles.css">
-        {%endblock%}
-
-    </head>
 
     {%block content%}
         <section class="carddetail">
-                <div class="recipdetail" id="{{recipes.title}}">
-                    <img src="{{recipes.image}}" alt="">
-                    <h1 id="pdetail">{{recipes.title}}</h1>
-                    <p  id="smalldetail">{{recipes.author}}</p>
+                <div class="recipdetail" id="{{recipe.title}}">
+                    <img src="{{recipe.image}}" alt="">
+                    <h1 id="detail">{{recipe.title}}</h1>
+                    <p  id="smalldetail">{{recipe.author}}</p>
                     <ul>Ingredientes <span class="esconder">ESCONDER</span> <span class="mostrar">MOSTRAR</span> </ul>
                     
-                    {%for ingredient in recipes.ingredients%}
+                    {%for ingredient in recipe.ingredients%}
                     <li class="ingred " >{{ingredient}};</li>
                     {%endfor%}
 
                     <ul>Modo de Preparo <span class="esconder1">ESCONDER</span> <span class="mostrar1">MOSTRAR</span> </ul>
-                    {%for line in recipes.preparation%}
-                    <p class="prep " >{{line}}</p>
+                    {%for line in recipe.preparation%}
+                    <p class="prep ">{{line}}</p>
                     {%endfor%}
 
                     <ul>informações Adicionais <span class="esconder2">ESCONDER</span> <span class="mostrar2">MOSTRAR</span> </ul>
-                    <p class="info " >{{recipes.information}}</p>
+                    <p class="info" >{{recipe.information}}</p>
                     
                 </div>
         </section> 

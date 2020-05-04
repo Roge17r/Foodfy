@@ -9,6 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     width: 940px;
     margin: 0 auto;
+    min-height:1300px;
     
     
 }
@@ -93,6 +94,7 @@ header img {
     height: 140px;
     border-radius: 15px;
     margin: 19px 0;
+    object-fit: cover;
 }
 
 .card p {
@@ -102,7 +104,7 @@ header img {
     opacity: 0.7;
 }
 
-.recip {
+.recip,.recipHome {
     cursor: pointer;
 }
 .space {
@@ -249,6 +251,7 @@ footer {
 .ingred.active,.prep.active,.info.active{
     visibility: hidden;
     height: 0;
+    opacity: 0;
 }
 
 .mostrar,.mostrar1,.mostrar2 {
@@ -273,4 +276,20 @@ footer {
     font-size: 18px;
     text-align: left;
     line-height: 28px;
+}
+
+/*** admmin ***/
+
+.admin.active {
+    background-color: #111111;
+}
+
+.admin.active img {
+    filter: invert(1);
+    background: #eeeeee;
+    margin-left: 32px;
+}
+
+.admin.active .links {
+    visibility: hidden;
 }
