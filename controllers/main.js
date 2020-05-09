@@ -1,4 +1,4 @@
-const recipes = require('../data')
+const recipes = require('../data1')
 
 
 

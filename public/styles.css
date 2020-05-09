@@ -7,19 +7,18 @@
 }
 body {
     font-family: 'Roboto', sans-serif;
-    width: 940px;
+    width: 1400px;
     margin: 0 auto;
     min-height:1300px;
-    
-    
+    position: relative;
 }
 
 header {
-
+    margin: 0 231px auto;
     padding:  30px 0;
-    display: grid;
-    grid-template-columns: 0fr 1fr;
-    
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
 }
 
 header img {
@@ -49,9 +48,10 @@ header img {
     width: 940px;
     height: 366px;
     border-radius: 30px;
-    display: grid;
-    grid-template-columns: 1fr 0.5fr;
-    
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 231px auto;
+    justify-content: space-between;
 }
 
 #label .text {
@@ -75,18 +75,21 @@ header img {
 }
 
 #label .image {
-    margin-top: 21%;
+    margin-top: 7%;
+    margin-right: 9.1% ;
 }
 
 .card {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 231px auto;
 }
 
 .title h1 {
     margin-top: 50px;
     font-size: 24px;
+    margin: 50px 231px auto;
 }
 
 .card img {
@@ -102,6 +105,10 @@ header img {
 }
 .card small {
     opacity: 0.7;
+}
+
+.recip{
+    flex: 3 1 0;
 }
 
 .recip,.recipHome {
@@ -126,11 +133,13 @@ footer {
 /*** ABOUT ***/
 
 .title1 {
+    margin: 0 231px auto;
     font-size: 24px;
     padding: 15px 0;
 }
 
 .about {
+    margin: 0 231px auto;
     width: 940px;
     height: 280px;
     font-size: 18px;
@@ -205,10 +214,12 @@ footer {
 /*** DETAIL ***/
 .carddetail {
     display: block;
+    margin: 0 231px auto;
 }
 
 .recipdetail img{
-    width: 100%;
+    width: 940px;
+    height: 280px;
     border-radius: 15px;
 }
 
@@ -280,16 +291,150 @@ footer {
 
 /*** admmin ***/
 
+h2 {
+    margin:  55px 231px auto;
+}
+
 .admin.active {
     background-color: #111111;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .admin.active img {
     filter: invert(1);
     background: #eeeeee;
-    margin-left: 32px;
+    margin: 0 231px auto;
 }
 
-.admin.active .links {
+.admin.active .links a{
     visibility: hidden;
 }
+
+.card.active {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+}
+
+.recipe.active img{
+    width: 172px;
+    height: 80px;
+    border-radius: 8.57px;
+}
+.recipe.active{
+    display: flex;
+}
+.recipe.active div{
+    display: grid;
+    grid-template-rows: 28px 24px 16px;
+    margin: 25px 20px;
+}
+
+.recipe.active div p{
+   font-size: 18px;
+}
+
+.recipe.active div small{
+   font-size: 14px;
+}
+
+.recipe.active div a{
+   font-size: 14px;
+   text-decoration: none;
+   font-weight: bold;
+   color: #6558C3;
+}
+
+.recipAdmin{
+    cursor: pointer;    
+}
+/** DETAIL **/
+.carddetail.active div{
+    padding-top: 55px;
+    position: relative;
+    
+}
+
+.carddetail.active h3{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.carddetail.active img{
+    margin-top: 24px;
+}
+.carddetail.active a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 9px 20px;
+    background-color: #6558C3;
+    border-radius: 4px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 47.2px;
+}
+
+/** CREATE **/
+button[type="submit"]{
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 9px 20px;
+    background-color: #6558C3;
+    border-radius: 4px;
+    font-weight: bold;
+    position: absolute;
+    right: 220px;
+    top: 145px;
+}
+
+.create .item{
+    margin: 30px 231px auto;
+    font-size: 16px;
+    color: #111111;
+    font-weight: bold;
+    
+}
+
+.create .item input {
+    margin-top: 10px;
+    color: #5c5b5b;
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+button[type="button"]{
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #6558C3;
+    background-color: white;
+    margin: 15px 231px auto;
+    cursor: pointer;
+ }
+ .create .item:nth-child(6) div{
+    margin-bottom: 10px;
+ }
+
+ .create .item:nth-child(9) textarea{
+    height: 257px;
+    width: 100%;
+    resize: none;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #5c5b5b;
+    font-weight: bold;
+    padding: 10px 10px;
+    font-family: 'Roboto',sans-serif;
+ }

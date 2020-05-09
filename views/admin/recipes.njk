@@ -3,6 +3,18 @@
 
 
     {%block content%}
-    
+        <h2> Gerenciar Receitas </h2>
+        <section class="card active">
+            {%for recipe in recipes %}
+                <div class="recipe active" id="{{0}}">
+                    <img src="{{recipe.image}}" alt="">
+                    <div>
+                        <p>{{recipe.title}}</p>
+                        <small>{{recipe.author}}</small>
+                        <a class="recipAdmin">Visualizar</a>
+                    </div>                 
+                </div>
+            {%endfor%}
+        </section>
     
     {%endblock%}

@@ -2,8 +2,10 @@
 
 
     {%block content%}
-        <section class="carddetail">
+        <section class="carddetail active">
                 <div class="recipdetail" id="{{recipe.title}}">
+                    <h3>Receita: {{recipe.title}} </h3>
+                    <a href="#">Editar receita</a>
                     <img src="{{recipe.image}}" alt="">
                     <h1 id="detail">{{recipe.title}}</h1>
                     <p  id="smalldetail">{{recipe.author}}</p>
