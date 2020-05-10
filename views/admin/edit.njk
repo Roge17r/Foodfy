@@ -1,0 +1,23 @@
+{% extends "layout.njk" %}
+
+    {% block content %}
+<h2>Editando receita</h2>
+
+    <form class="form-create" method="POST" action="/admin/recipes?_method=PUT">
+        <section class="create">
+        {%include 'admin/fields.njk'%}
+        <input  class="recipeIndex" type="hidden"
+                            name="index"
+                            value=""
+                    >
+        </section>
+    </form>  
+    <form action="/admin/recipes?_method=delete" method="POST">
+        <input  class="recipeIndex" type="hidden"
+                            name="index"
+                            value=""
+                    >
+        <button class="deleteRecipe" type="submit">Deletar</button>
+    </form> 
+  
+    {% endblock %}

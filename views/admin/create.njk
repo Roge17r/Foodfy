@@ -1,118 +1,15 @@
 {%extends "layout.njk"%}
    
-   
    {%block content%}
     <h2>Criando receita</h2>
 
     <form class="form-create" method="POST" action="/admin/recipes">
         <section class="create">
-        <button class="stop-alert" type="submit">Salvar Receita</button>
-             <div class="item">
-                <div>Imagem da receita</div>
-                <div>
-                    <input  type="url"
-                            name="image"
-                    >
-                </div>
-            </div>
-             <div class="item">
-                <div>Título</div>
-                <div>
-                    <input  type="text"
-                            name="title"
-                    >
-                </div>
-            </div>
-            <div class="item">
-                <div>Autor</div>
-                <div>
-                    <input  type="text"
-                            name="author"
-                    >
-                </div>
-            </div>
-            <div id="ingredients" class="item">
-                <div>Ingredientes</div>
-                <div class="ingredient">
-                    <input  type="text" 
-                            name="ingredients[]" 
-                            value=""
-                            placeholder="Ingrediente" 
-                    />
-                </div>
-            </div>
-            <button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
-
-            <div id="preparation" class="item">
-                <div>Modo de preparo</div>
-                <div class="preparation">
-                    <input  type="text" 
-                            name="preparation[]" 
-                            value=""
-                            placeholder="" 
-                    />
-                </div>
-            </div>
-            <button type="button" class="add-prepare">Adicionar novo passo</button>
-            
-            <div class="item">
-                <div>informações adicionais</div>
-                <div>
-                    <textarea  type="text"
-                               name="information"
-                    ></textarea>
-                </div>
-            </div>
+        
+        {%include 'admin/fields.njk'%}
                      
         </section>
     </form>    
   
 
-<script>
-function addIngredient() {
-  const ingredients = document.querySelector("#ingredients");
-  const fieldContainer = document.querySelectorAll(".ingredient");
-
-  // Realiza um clone do último ingrediente adicionado
-  const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
-
-  // Não adiciona um novo input se o último tem um valor vazio
-  if (newField.children[0].value == "") return false;
-
-  // Deixa o valor do input vazio
-  newField.children[0].value = "";
-  ingredients.appendChild(newField);
-}
-
-document
-  .querySelector(".add-ingredient")
-  .addEventListener("click", addIngredient);
-
-function addPrepare() {
-  const preparations = document.querySelector("#preparation");
-  const fieldContainer = document.querySelectorAll(".preparation");
-
-  // Realiza um clone do último preparatione adicionado
-  const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
-
-  // Não adiciona um novo input se o último tem um valor vazio
-  if (newField.children[0].value == "") return false;
-
-  // Deixa o valor do input vazio
-  newField.children[0].value = "";
-  preparations.appendChild(newField);
-}
-
-document
-  .querySelector(".add-prepare")
-  .addEventListener("click", addPrepare);
-</script>
-
-
-
-
-
-
-
-
-    {%endblock%}
+{%endblock%}

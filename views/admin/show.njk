@@ -5,7 +5,7 @@
         <section class="carddetail active">
                 <div class="recipdetail" id="{{recipe.title}}">
                     <h3>Receita: {{recipe.title}} </h3>
-                    <a href="#">Editar receita</a>
+                    <a class="editRecipe">Editar receita</a>
                     <img src="{{recipe.image}}" alt="">
                     <h1 id="detail">{{recipe.title}}</h1>
                     <p  id="smalldetail">{{recipe.author}}</p>
@@ -26,7 +26,11 @@
                 </div>
         </section> 
  
-
-    <script src="/scripts.js"></script>
+    <script>
+        document.querySelector("a.editRecipe").addEventListener("click", function () {
+        window.location.href = `${~~location.pathname.match(/recipes\/(\d+)/)[1]}/edit`
+        })
+    </script>
+    
     
     {%endblock%}

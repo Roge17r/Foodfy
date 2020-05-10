@@ -1,0 +1,66 @@
+<button class="stop-alert" type="submit">Salvar Receita</button>
+             <div class="item">
+                <div>Imagem da receita</div>
+                <div>
+                    <input  type="url"
+                            name="image"
+                            value="{{recipe.image}}"
+                    >
+                </div>
+            </div>
+             <div class="item">
+                <div>Título</div>
+                <div>
+                    <input  type="text"
+                            name="title"
+                            value="{{recipe.title}}"
+                    >
+                </div>
+            </div>
+            <div class="item">
+                <div>Autor</div>
+                <div>
+                    <input  type="text"
+                            name="author"
+                            value="{{recipe.author}}"
+                    >
+                </div>
+            </div>
+            <div id="ingredients" class="item">
+                <div>Ingredientes</div>
+                {% for ingredient in recipe.ingredients %}
+                <div class="ingredient">
+                    <input  type="text" 
+                            name="ingredients[]"
+                            value="{{ingredient}}"
+                            placeholder="Ingrediente" 
+                    />
+                </div>
+                    {% endfor %}
+
+            </div>
+            <button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
+
+            <div id="preparation" class="item">
+                <div>Modo de preparo</div>
+                 {% for step in recipe.preparation %}
+                <div class="preparation">
+                    <input  type="text" 
+                            name="preparation[]" 
+                            value="{{step}}"
+                            placeholder="" 
+                    />
+                </div>
+                {% endfor %}
+            </div>
+            <button type="button" class="add-prepare">Adicionar novo passo</button>
+            
+            <div class="item">
+                <div>informações adicionais</div>
+                <div>
+                    <textarea  type="text"
+                               name="information"
+                               value=""
+                    >{{recipe.information}}</textarea>
+                </div>
+            </div>

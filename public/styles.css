@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     width: 1400px;
     margin: 0 auto;
-    min-height:1300px;
+    min-height:1500px;
     position: relative;
 }
 
@@ -378,6 +378,7 @@ h2 {
     position: absolute;
     right: 0;
     top: 47.2px;
+    cursor: pointer;
 }
 
 /** CREATE **/
@@ -391,6 +392,12 @@ button[type="submit"]{
     position: absolute;
     right: 220px;
     top: 145px;
+    cursor: pointer;
+}
+
+button[type="submit"].deleteRecipe{
+    right: 379px;
+    background-color: #DC4747;
 }
 
 .create .item{
