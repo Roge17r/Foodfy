@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     width: 1400px;
     margin: 0 auto;
-    min-height:1500px;
+    min-height:100px;
     position: relative;
 }
 
@@ -118,16 +118,15 @@ header img {
     height: 100px;
 }
 footer {
-    margin: 0 auto;
     text-align: center;
     padding: 20px;
     background-color: #eeeeee;
     font-size: 14px;
     color: #999999;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    /* height: 10px; */
+    line-height: -440px;
     width: 100%;
+    margin-top: 50px;
 }
 
 /*** ABOUT ***/
@@ -218,6 +217,7 @@ footer {
 }
 
 .recipdetail img{
+    object-fit: cover;
     width: 940px;
     height: 280px;
     border-radius: 15px;
@@ -230,7 +230,7 @@ footer {
 }
 
 .recipdetail p{
-    color: #777777;
+    color: #444444;
     font-size: 20px;
     text-align: center;
 }
@@ -290,7 +290,9 @@ footer {
 }
 
 /*** admmin ***/
-
+.adminF.active {
+    visibility: hidden;
+}
 h2 {
     margin:  55px 231px auto;
 }
@@ -380,7 +382,15 @@ h2 {
     top: 47.2px;
     cursor: pointer;
 }
-
+.carddetail.active textarea{
+    width: 100%;
+    min-height: 300px;
+    color: #444444;
+    font-size: 18px;
+    font-family: 'Roboto',sans-serif;
+    resize: none;
+    background-color: #FFFFFF;
+}
 /** CREATE **/
 button[type="submit"]{
     font-size: 16px;

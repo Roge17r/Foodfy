@@ -22,4 +22,4 @@ routes.put("/admin/recipes/", recipes.put); // Editar uma receita
 routes.delete("/admin/recipes", recipes.delete); // Deletar uma receita
 
 
-  module.exports = routes
+module.exports = routes

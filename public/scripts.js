@@ -4,7 +4,7 @@ const currentPage = location.pathname
 const headerAdmin = document.querySelector(".admin")
 if(currentPage.includes("admin")){
     headerAdmin.classList.add("active")
-   
+    document.querySelector(".adminF").classList.add("active")
 }
 
 
@@ -140,6 +140,15 @@ if(location.pathname.includes("/create") || location.pathname.includes("/edit"))
 
   //passa o index da url para combinar com o index da receita
   const currentIndex = ~~location.pathname.match(/recipes\/(\d+)/)[1]
-  document.querySelector("input.recipeIndex").value = currentIndex
-
   
+  document.querySelector("input.recipeIndex").value = currentIndex
+  document.querySelector("input.arrayDelete").value = currentIndex
+ console.log(currentIndex)
+  
+ const formDelete = document.querySelector("#form-delete")
+formDelete.addEventListener("submit",function(event){
+    const confirmation = confirm("Deseja deletar essa receita?")
+        if(!confirmation){
+                event.preventDefault()
+        }
+    })

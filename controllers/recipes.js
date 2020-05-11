@@ -82,10 +82,14 @@ exports.delete =
 function(req,res){
 
     const { index } = req.body
+    
+    data.recipes.splice(index,1);
+    
+    fs.writeFile('data.json', JSON.stringify(data,null,2),function(err){
+        if(err) return res.sendStatus(400)
 
-    const filteredRecipes = data.recipes.filter(function(recipe){
-        return recipe != index
+        return res.redirect('recipes')
     })
 
-    
+
 }
